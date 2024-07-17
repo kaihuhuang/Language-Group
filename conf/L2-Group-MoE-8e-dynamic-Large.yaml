@@ -85,12 +85,13 @@ dataset_conf:
     sort_conf:
         sort_size: 1000  # sort_size should be less than shuffle_size
     batch_conf:
-        batch_type: 'static' # static or dynamic
-        batch_size: 16
-
+        # batch_type: 'static' # static or dynamic
+        # batch_size: 16
+        batch_type: 'dynamic' # static or dynamic
+        max_frames_in_batch: 20000
 grad_clip: 5
-accum_grad: 4
-max_epoch: 100
+accum_grad: 1
+max_epoch: 50
 log_interval: 100
 
 optim: adam
