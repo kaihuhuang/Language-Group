@@ -3,6 +3,7 @@ Our code is mainly based on [wenet](https://github.com/wenet-e2e/wenet) version 
 
 - All experiments are configured as shown in `./conf`
 - The package used for the experimental conda environment is shown in `./environment_packages.txt`
+- The source code for this experiment is located at `./src/Group-MoE`
 ## Train && Infer && Export
 If you want to reproduce our experiment, you just need to process the dataset and place it in the `./data` and run the following command
 ```
