@@ -1,1 +1,1 @@
-# Language-Group
+"Once you have prepared your data, make sure to modify the corresponding configurations and then execute 'bash train.sh' for training and 'bash infer.sh' for inference. If you need to export to JIT format, simply run 'bash export.sh'."
