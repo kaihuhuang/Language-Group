@@ -1,7 +1,7 @@
 # Language Group
 Our code is mainly based on [wenet](https://github.com/wenet-e2e/wenet) version 2.0
 
-- All experiments are configured as shown in `./conf`
+- The configuration file for the experiment is in `./conf`
 - The package used for the experimental conda environment is shown in `./environment_packages.txt`
 - The source code for this experiment is located at `./src/Group-MoE`
 
