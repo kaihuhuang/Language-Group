@@ -7,13 +7,9 @@ Our code is mainly based on [wenet](https://github.com/wenet-e2e/wenet) version 
 
 ## Introduction
 We implement a highly flexible MoE model, based on the proposed dynamic language expert group, which allows us to flexibly carry out the design of the expert group according to the actual needs and to choose different topk for reasoning in order to realize the trade-off between performance and speed. And since we are based on the U2++ architecture, we also support streaming inference with different chunksizes.
-## Train && Infer && Export
+## Train && Infer
 If you want to reproduce our experiment, you just need to prepare the dataset and place it in the `./data` and run the following command
 ```
 bash train.sh
 bash infer.sh
-```
-You can export a JIT model using the following command
-```
-bash export.sh
 ```
