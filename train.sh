@@ -26,7 +26,7 @@ if [ ${stage} -le 4 ] && [ ${stop_stage} -ge 4 ]; then
   { 
     data=data
     train_data=$data/train/data.list
-    train_config=conf/S12-Group-MoE-8e-dynamic.yaml
+    train_config=conf/DLG-8e-dynamic.yaml
     data_type=raw
     dict=data/dict/mix_dict.txt
     bpemodel=data/dict/train_960_unigram5000.model
