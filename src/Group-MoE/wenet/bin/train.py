@@ -130,9 +130,9 @@ def get_args():
 
 def main():
     args = get_args()
-    logger = get_Mylogger("train",args.log_dir)
+    logger = get_Mylogger("train", args.log_dir)
     logger.info(args)
-    logger_model = get_Mylogger("model",args.log_dir)
+    logger_model = get_Mylogger("model", args.log_dir)
     os.environ['CUDA_VISIBLE_DEVICES'] = str(args.gpu)
 
     # Set random seed
@@ -168,17 +168,17 @@ def main():
     logger.info(args.cv_datasets)
     for cv_dataset in args.cv_datasets:
         temp_dataset = Dataset(args.data_type,
-                         cv_dataset,
-                         symbol_table,
-                         cv_conf,
-                         args.bpe_model,
-                         non_lang_syms,
-                         partition=False)
+                               cv_dataset,
+                               symbol_table,
+                               cv_conf,
+                               args.bpe_model,
+                               non_lang_syms,
+                               partition=False)
         cv_data_loader = DataLoader(temp_dataset,
-                                batch_size=None,
-                                pin_memory=args.pin_memory,
-                                num_workers=args.num_workers,
-                                prefetch_factor=args.prefetch)
+                                    batch_size=None,
+                                    pin_memory=args.pin_memory,
+                                    num_workers=args.num_workers,
+                                    prefetch_factor=args.prefetch)
         cv_datasets.append(temp_dataset)
         cv_dataloaders.append(cv_data_loader)
     train_data_loader = DataLoader(train_dataset,
