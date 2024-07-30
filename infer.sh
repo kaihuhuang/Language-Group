@@ -8,9 +8,6 @@ stage=5
 stop_stage=5
 num_nodes=1
 node_rank=0
-cmvn=false
-train_set=train
-# dir=exp/group_moe_pretrain # 预训练共享块阶段
 dir=exp/group
 
 . tools/parse_options.sh || exit 1;
