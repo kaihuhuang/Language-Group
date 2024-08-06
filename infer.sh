@@ -1,7 +1,7 @@
 # !/bin/bash
 export CUDA_VISIBLE_DEVICES="0,1,2,3"
 export NCCL_DEBUG=INFO
-export WENET_DIR="src/Group-MoE"
+export WENET_DIR="src/DLG-MoE"
 export PYTHONIOENCODING=UTF-8
 export PYTHONPATH=$WENET_DIR:$PYTHONPATH
 stage=5
