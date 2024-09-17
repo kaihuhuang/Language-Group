@@ -36,27 +36,17 @@ from wenet.utils.my_logger import get_Mylogger
 
 
 def get_args():
-    config = "conf/MoE-LID.yaml"
-    config = "conf/Baseline-18.yaml"
-    config = "conf/1-Baseline-12.yaml"
-    # config = "conf/2-Baseline-18.yaml"
-    # config = "conf/3-Dense-MoE.yaml"
-    # config = "conf/4-Sparse-MoE.yaml"
-    # config = "conf/5-Group-MoE.yaml"
-    # config = "conf/6-Group-gate.yaml"
-    config = "conf/7-Group-gate-dynamic.yaml"
-    # config = "conf/8-Group-large-dynamic-all.yaml"
-    # config = "conf/9-Group-large-dynamic-all-multi.yaml"
-    train_data = "data/data.list"
+    config = "conf/DLG-8e-dynamic.yaml"
+    train_data = "data/debug.list"
     # train_data = "data/test_flops.list"
-    cv_data = ["data/data.list"]
+    cv_data = ["data/debug.list"]
     checkpoint = None
     model_dir = "./exp"
     model_dir = "/Users/huanghukai/Documents/exp"
     symbol_table = "data/dict/mix_dict.txt"
     bpe_model = "data/dict/train_960_unigram5000.model"
     enc_init = None
-    cmvn = "data/dict/global_cmvn"
+    cmvn = "data/train/global_cmvn"
     parser = argparse.ArgumentParser(description='training your network')
     parser.add_argument('--config', default=config, help='config file')
     parser.add_argument('--data_type',
@@ -125,7 +115,7 @@ def get_args():
 
 def main():
     current_dir = os.getcwd()
-    os.chdir(os.path.join(current_dir, 'Group-MoE'))
+    os.chdir(os.path.join(current_dir, 'Language-Group/Language-Group'))
     args = get_args()
     logger = get_Mylogger("train", args.model_dir)
     logger.info(args)

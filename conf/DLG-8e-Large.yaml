@@ -1,5 +1,4 @@
 inter_idx: [5]
-interctc_weight: 0.1
 moe_conf:
     expert_num: [4,4]
     ffn_dim: 2048
