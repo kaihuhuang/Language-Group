@@ -38,3 +38,10 @@ If you find this repository helpful for your research, please cite our work:
   journal={arXiv preprint arXiv:2407.18581},
   year={2024}
 }
+
+@article{huang2024enhancing,
+  title={Enhancing Code-Switching Speech Recognition with LID-Based Collaborative Mixture of Experts Model},
+  author={Huang, Hukai and Lin, Jiayan and Wang, Kaidi and Li, Yishuang and Guan, Wenhao and Li, Lin and Hong, Qingyang},
+  journal={arXiv preprint arXiv:2409.02050},
+  year={2024}
+}
